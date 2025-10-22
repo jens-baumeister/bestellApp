@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "dishfont";
+    src: url("../assets/fonts/PlaywriteAUTAS-VariableFont_wght.ttf");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "descriptionfont";
+    src: url("../assets/fonts/Raleway-VariableFont_wght.ttf");
+    font-weight: normal;
+}
