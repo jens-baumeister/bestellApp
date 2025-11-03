@@ -17,3 +17,45 @@ footer {
     height: 75px;
     width: 240px;
 }
+
+.upper_img {
+    margin-top: 100px;
+}
+
+.upper_img img {
+    width: 100vw;
+    height: 200px;
+    object-fit: cover; 
+    object-position: center;
+}
+
+.restaurant {
+    width: 1440px;
+    height: 200px;
+}
+.restaurant_name {
+    margin-top:20px;
+    font-size: 40px;
+}
+
+.rating {
+    margin-top: 10px;
+    font-size: 24px;
+    color: #FF8001
+}
+
+.fa-star {
+    color: black;
+}
+
+.checked {
+  color: #FF8001;
+}
+
+.dishes img {
+    width: 100vw;
+    height: 200px;
+    object-fit: cover; 
+    object-position: center bottom;
+}
+
