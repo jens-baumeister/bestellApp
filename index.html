@@ -42,16 +42,28 @@
         </section>
         <article class="dishes">
             <nav class="menu-head">
-                <button><h2 class="category">
-                    <svg height="32px" viewBox="0 -960 960 960" width="32px" fill="#FF8001">
-                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
-                    </svg>Hauptgerichte
-                </h2></button>
-                <button><h2 class="category">Getränke</h2></button>
-                <button><h2 class="category">Desserts</h2></button>
+                <button onclick="init()" aria-label="complete_menucard">
+                    <h2 class="category">
+                        <svg height="32px" viewBox="0 -960 960 960" width="32px" fill="#FF8001">
+                            <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                        </svg>
+                    </h2>
+                </button>
+                <button onclick="onlyDishes()">
+                    <h2 class="category">Hauptgerichte</h2>
+                </button>
+                </button>
+                <button onclick="onlyDrinks()">
+                    <h2 class="category">Getränke</h2>
+                </button>
+                <button onclick="onlyDesserts()">
+                    <h2 class="category">Desserts</h2>
+                </button>
             </nav>
-                <img src="./assets/imgs/pasta-3547078_1280.jpg" alt="" srcset="">
-                <section id="maindishes"></section>
+            <img src="./assets/imgs/pasta-3547078_1280.jpg" alt="" srcset="">
+            <section id="maindishes"></section>
+            <sections id="drinks"></sections>
+            <section id="desserts"></section>
         </article>
     </main>
     <footer>
