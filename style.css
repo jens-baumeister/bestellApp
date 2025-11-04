@@ -57,7 +57,6 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(208, 207, 207);
 }
 
 .dishes img {
@@ -87,13 +86,29 @@ footer {
     color: #FF8001;
 }
 
+.category:focus-visible {
+    color: #FF8001;
+}
+
 .dish {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
     width: 1400px;
     margin-top: 20px;
     padding: 10px;
+    border-radius: 5px;;
     background-color: white;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.price {
+    color:#FF8001;
+}
+
+footer {
+    color: white;
+    font-size: 18px;
+    margin-right: 20px;
 }
