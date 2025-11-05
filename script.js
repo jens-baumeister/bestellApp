@@ -1,3 +1,5 @@
+let cart = [];
+
 function init() {
     renderMainDishes();
     renderDrinks();

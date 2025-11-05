@@ -1,6 +1,6 @@
 function getMainDishes(i) {
     return `
-        <button class="dish">
+        <button onclick="addToCart" class="dish">
             <div class="dish_header">
                 <h3>${mainDishes[i].name}
                 </h3>
@@ -19,7 +19,7 @@ function getMainDishes(i) {
 
 function getDrinks(i) {
     return `
-        <button class="dish">
+        <button onclick="addToCart" class="dish">
             <div class="dish_header">
                 <h3>${drinks[i].name}
                 </h3>
@@ -38,7 +38,7 @@ function getDrinks(i) {
 
 function getDesserts(i) {
     return `
-        <button class="dish">
+        <button onclick="addToCart" class="dish">
             <div class="dish_header">
                 <h3>${desserts[i].name}
                 </h3>
