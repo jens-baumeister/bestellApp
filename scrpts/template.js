@@ -1,35 +1,56 @@
 function getMainDishes(i) {
     return `
-        <div class="dish">
-            <h3>${mainDishes[i].name}</h3><br>
+        <button class="dish">
+            <div class="dish_header">
+                <h3>${mainDishes[i].name}
+                </h3>
+                <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#FF8001">
+                <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/>
+                </svg>
+
+            </div><br>
             <p>${mainDishes[i].description}</p><br>
             <div class="price">
-            <br><h3>€${mainDishes[i].price.toFixed(2)}</h3>
+                <br><h3>€${mainDishes[i].price.toFixed(2)}</h3>
             </div>
-        </div>
-        `;
+        </button>
+    `;
 }
 
 function getDrinks(i) {
     return `
-        <div class="dish">
-            <h3>${drinks[i].name}</h3><br>
+        <button class="dish">
+            <div class="dish_header">
+                <h3>${drinks[i].name}
+                </h3>
+                <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#FF8001">
+                <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/>
+                </svg>
+
+            </div><br>
             <p>${drinks[i].description}</p><br>
             <div class="price">
-            <br><h3>€${drinks[i].price.toFixed(2)}</h3>
+                <br><h3>€${drinks[i].price.toFixed(2)}</h3>
             </div>
-        </div>
-        `;
+        </button>
+    `;
 }
 
 function getDesserts(i) {
     return `
-        <div class="dish">
-            <h3>${desserts[i].name}</h3><br>
-            <p>${desserts[i].description}</p><br>
+        <button class="dish">
+            <div class="dish_header">
+                <h3>${desserts[i].name}
+                </h3>
+                <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#FF8001">
+                <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/>
+                </svg>
+
+            </div><br>
+                <p>${desserts[i].description}</p><br>
             <div class="price">
             <br><h3>€${desserts[i].price.toFixed(2)}</h3>
             </div>
-        </div>
-        `;
+        </button>
+    `;
 }
