@@ -56,12 +56,7 @@ function renderCart() {
     let cartRef = document.getElementById('cart');
     cartRef.innerHTML = '';
     for (let i = 0; i < cart.length; i++) {
-        cartRef.innerHTML += `
-            <div class="cart_item">
-                <p>${cart[i].name} - €${cart[i].price.toFixed(2)}</p>
-            </div>
-        `;
+        cartRef.innerHTML += getCartItem(i);
     }
 }
-
 

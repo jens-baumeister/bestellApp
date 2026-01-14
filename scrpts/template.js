@@ -54,3 +54,11 @@ function getDesserts(i) {
         </button>
     `;
 }
+
+function getCartItem(i) {
+    return `
+        <div class="cart_item">
+            <p>${cart[i].name} - €${cart[i].price.toFixed(2)}</p>
+        </div>
+    `;
+}
