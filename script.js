@@ -4,6 +4,7 @@ function init() {
     renderMainDishes();
     renderDrinks();
     renderDesserts();
+    renderCart();
 }
 
 function renderMainDishes() {
@@ -50,3 +51,17 @@ function onlyDesserts() {
     document.getElementById('desserts').innerHTML = '';
     renderDesserts();
 }
+
+function renderCart() {
+    let cartRef = document.getElementById('cart');
+    cartRef.innerHTML = '';
+    for (let i = 0; i < cart.length; i++) {
+        cartRef.innerHTML += `
+            <div class="cart_item">
+                <p>${cart[i].name} - €${cart[i].price.toFixed(2)}</p>
+            </div>
+        `;
+    }
+}
+
+
