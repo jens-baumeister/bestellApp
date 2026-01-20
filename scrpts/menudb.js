@@ -1,7 +1,7 @@
 const mainDishes = [
     { "name": "Ragù alla Bolognese",
         "price": 12.50,
-        "description": "Klassische italienische Fleischsauce mit frischen Tomaten, Zwiebeln, Karotten und Sellerie, serviert mit Spaghetti.",
+        "description": "Klassische italienische Fleischsauce mit frischen Tomaten, Zwiebeln, Karotten und Sellerie, serviert mit Fettuccine.",
     },
     { "name": "Spaghetti Carbonara con Tartufo",
         "price": 14.00,
