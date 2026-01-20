@@ -10,7 +10,7 @@ function init() {
 function renderMainDishes() {
     let mainDishesRef = document.getElementById('maindishes');
     mainDishesRef.innerHTML = '';
-    for (let i = 0; i < mainDishes.length; i++) {
+    for (let i = 0; i < menu.mainDishes.length; i++) {
         mainDishesRef.innerHTML += getMainDishes(i);
     }
 }
@@ -18,7 +18,7 @@ function renderMainDishes() {
 function renderDrinks() {
     let drinksRef = document.getElementById('drinks');
     drinksRef.innerHTML = '';
-    for (let i = 0; i < drinks.length; i++) {
+    for (let i = 0; i < menu.drinks.length; i++) {
         drinksRef.innerHTML += getDrinks(i);
     }
 }
@@ -26,7 +26,7 @@ function renderDrinks() {
 function renderDesserts() {
     let dessertsRef = document.getElementById('desserts');
     dessertsRef.innerHTML = '';
-    for (let i = 0; i < desserts.length; i++) {
+    for (let i = 0; i < menu.desserts.length; i++) {
         dessertsRef.innerHTML += getDesserts(i);
     }
 }
@@ -60,3 +60,12 @@ function renderCart() {
     }
 }
 
+function moveDish(i, destinationKey) {
+    let item = menu[destinationKey].push(item[0], i);
+    document.getElementById('maindishes').innerHTML = '';
+    document.getElementById('drinks').innerHTML = '';
+    document.getElementById('desserts').innerHTML = '';
+    renderMainDishes();
+    renderDrinks();
+    renderDesserts();
+}
