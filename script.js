@@ -60,12 +60,3 @@ function renderCart() {
     }
 }
 
-function moveDish(i, destinationKey) {
-    let item = menu[destinationKey].push(item[0], i);
-    document.getElementById('maindishes').innerHTML = '';
-    document.getElementById('drinks').innerHTML = '';
-    document.getElementById('desserts').innerHTML = '';
-    renderMainDishes();
-    renderDrinks();
-    renderDesserts();
-}
