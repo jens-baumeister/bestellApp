@@ -135,5 +135,14 @@ aside {
 }
 
 .cart {
+
     font-size: 24px;
+}
+
+.cart_item {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: 24px;
+    border: solid 1px #FF8001;
 }

@@ -58,7 +58,7 @@ function getDesserts(i) {
 function getCartItem(i) {
     return `
         <div class="cart_item">
-            <p>${cart[i].name} - €${cart[i].price.toFixed(2)}</p>
+            <p>${cart[i].name}</p><p>€${cart[i].price.toFixed(2)}</p>
         </div>
     `;
 }
