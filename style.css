@@ -151,5 +151,8 @@ aside {
 
 .portions {
     width: 30px;
+    height: 30px;
+    border: solid 1px #FF8001;
+    border-radius: 5px;
     text-align: center;
 }
