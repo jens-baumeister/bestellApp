@@ -63,11 +63,13 @@ function getCartItem(i) {
             </button>
             <h5>${cart[i].name}</p><p>€${cart[i].price.toFixed(2)}<br></h5>
             
-            <p>
+            <button>
                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FF8001"><path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/></svg>
+            </button>
                 <input type="number" id="portions" class="portions" value="1">
+            <button>
                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FF8001"><path d="M200-440v-80h560v80H200Z"/></svg>
-            </p>
+            </button>
             
         </section>
     `;
