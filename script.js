@@ -60,3 +60,11 @@ function renderCart() {
     }
 }
 
+function addToCart(i, startKey) {
+    let item = menu[startKey][i];
+    cart.push({
+        name: item.name,
+        price: item.price
+    });
+    renderCart();
+}
