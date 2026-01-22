@@ -23,7 +23,7 @@ footer {
 }
 
 .upper_img img {
-    width: 100vw;
+    width: 99.5vw;
     height: 200px;
     object-fit: cover;
     object-position: center;
@@ -61,7 +61,7 @@ footer {
 }
 
 .dishes img {
-    width: 100vw;
+    width: 99.5vw;
     height: 200px;
     margin-top: 10px;
     object-fit: cover;
@@ -126,7 +126,7 @@ aside {
     top: 100px;
     right: 0px;
     width: 500px;
-    height: 1217px;
+    height: 1228px;
     border: solid 1px #FF8001;
     border-radius: 5px;
     padding: 10px;

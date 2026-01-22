@@ -68,3 +68,8 @@ function addToCart(i, startKey) {
     });
     renderCart();
 }
+
+function removeFromCart(i) {
+    cart.splice(i, 1);
+    renderCart();
+}
