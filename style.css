@@ -141,12 +141,23 @@ aside {
 
 .cart_item {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: space-between;
     height: 75px;
     margin-top: 20px;
     font-size: 24px;
     border: solid 1px #FF8001;
     border-radius: 5px;
+}
+
+.item_details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 450px;
+    margin: 2px;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .portions {
@@ -155,4 +166,13 @@ aside {
     border: solid 1px #FF8001;
     border-radius: 5px;
     text-align: center;
+}
+
+.portions_control {
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-end;
 }
