@@ -61,6 +61,11 @@ function renderCart() {
 }
 
 function addToCart(i, startKey) {
+  if (cart.some((item) => item.name === menu[startKey][i].name)) {
+    let index = cart.findIndex((item) => item.name === menu[startKey][i].name);
+    picePlusOne(index);
+    return;
+  }
   let item = menu[startKey][i];
   cart.push({
     name: item.name,
