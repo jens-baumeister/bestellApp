@@ -63,20 +63,20 @@ return `
 <article class="cart_item">
     <section class="item_details">
         <p>${cart[i].name}</p>
-        <p>€${cart[i].price.toFixed(2)*cart[i].quantity}</p>
+        <p>€${(cart[i].price * cart[i].quantity).toFixed(2)}</p>
 
 
     </section>
     <section class="item_details">
         <div class="portions_control">
-            <button>
+            <button onclick="picePlusOne(${i})">
                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
                     fill="#FF8001">
                     <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z" />
                 </svg>
             </button>
             <p class="quantity">${cart[i].quantity} X</p>
-            <button>
+            <button onclick="piceMinusOne(${i})">
                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
                     fill="#FF8001">
                     <path d="M200-440v-80h560v80H200Z" />

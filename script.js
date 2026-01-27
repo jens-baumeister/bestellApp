@@ -74,3 +74,17 @@ function removeFromCart(i) {
   cart.splice(i, 1);
   renderCart();
 }
+
+function picePlusOne(i) {
+  cart[i].quantity += 1;
+  renderCart();
+}
+
+function piceMinusOne(i) {
+  if (cart[i].quantity > 1) {
+    cart[i].quantity -= 1;
+  } else {
+    removeFromCart(i);
+  }
+  renderCart();
+}
