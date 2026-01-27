@@ -136,7 +136,7 @@ aside {
 
 .cart {
 
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
 .cart_item {
@@ -145,7 +145,7 @@ aside {
     align-items: space-between;
     height: 75px;
     margin-top: 20px;
-    font-size: 24px;
+    font-size: 1.2rem;
     border: solid 1px #FF8001;
     border-radius: 5px;
 }
@@ -156,7 +156,7 @@ aside {
     justify-content: space-between;
     width: 450px;
     margin: 2px;
-    font-size: 24px;
+    font-size: 1.2rem;
     font-weight: bold;
 }
 
@@ -178,6 +178,6 @@ aside {
 }
 
 .quantity {
-    font-size: 20px;
+    font-size: 1rem;
     font-weight: bold;
 }
