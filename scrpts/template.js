@@ -63,7 +63,7 @@ return `
 <article class="cart_item">
     <section class="item_details">
         <p>${cart[i].name}</p>
-        <p>€${cart[i].price.toFixed(2)}</p>
+        <p>€${cart[i].price.toFixed(2)*cart[i].quantity}</p>
 
 
     </section>
@@ -75,7 +75,7 @@ return `
                     <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z" />
                 </svg>
             </button>
-            <input type="number" id="portions" class="portions" value="1">
+            <p class="quantity">${cart[i].quantity} X</p>
             <button>
                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
                     fill="#FF8001">
