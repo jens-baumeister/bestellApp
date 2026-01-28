@@ -94,3 +94,8 @@ return `
 </article>
 `;
 }
+function getTotalPrice(total) {
+return `
+<h2>Gesamt: €${total.toFixed(2)}</h2>
+`;
+}

@@ -93,3 +93,12 @@ function piceMinusOne(i) {
   }
   renderCart();
 }
+
+function totalPrice() {
+  let totalPriceRef = document.getElementById("totalprice");
+  let total = 0;
+  for (let i = 0; i < cart.length; i++) {
+    total += cart[i].price * cart[i].quantity;
+  }
+  totalPriceRef.innerHTML = getTotalPrice(total);
+}
