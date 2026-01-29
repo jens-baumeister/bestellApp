@@ -1,5 +1,5 @@
 function getMainDishes(i) {
-return `
+  return `
 <button onclick="addToCart(${i}, 'mainDishes')" class="dish">
     <div class="dish_header">
         <h3>${menu.mainDishes[i].name}
@@ -19,7 +19,7 @@ return `
 }
 
 function getDrinks(i) {
-return `
+  return `
 <button onclick="addToCart(${i}, 'drinks')" class="dish">
     <div class="dish_header">
         <h3>${menu.drinks[i].name}
@@ -39,7 +39,7 @@ return `
 }
 
 function getDesserts(i) {
-return `
+  return `
 <button onclick="addToCart(${i}, 'desserts')" class="dish">
     <div class="dish_header">
         <h3>${menu.desserts[i].name}
@@ -59,7 +59,7 @@ return `
 }
 
 function getCartItem(i) {
-return `
+  return `
 <article class="cart_item">
     <section class="item_details">
         <p>${cart[i].name}</p>
@@ -95,7 +95,10 @@ return `
 `;
 }
 function getTotalPrice(total) {
-return `
-<h2>Gesamt: €${total.toFixed(2)}</h2>
+  return `
+<section class="total_price">
+    <h4>Gesamt:</h4> 
+    <h4>€${total.toFixed(2)}</h4>
+</section>
 `;
 }

@@ -58,6 +58,7 @@ function renderCart() {
   for (let i = 0; i < cart.length; i++) {
     cartRef.innerHTML += getCartItem(i);
   }
+  renderTotalPrice();
 }
 
 function addToCart(i, startKey) {
@@ -94,7 +95,12 @@ function piceMinusOne(i) {
   renderCart();
 }
 
-function totalPrice() {
+function renderTotalPrice() {
+  if (cart.length === 0) {
+    let totalPriceRef = document.getElementById("totalprice");
+    totalPriceRef.innerHTML = "";
+    return;
+  }
   let totalPriceRef = document.getElementById("totalprice");
   let total = 0;
   for (let i = 0; i < cart.length; i++) {
