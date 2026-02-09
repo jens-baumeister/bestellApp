@@ -126,7 +126,7 @@ aside {
     top: 100px;
     right: 0px;
     width: 500px;
-    height: calc(100vh - 215px);
+    height: calc(100vh - 200px);
     border: solid 1px #FF8001;
     border-radius: 5px;
     padding: 10px;
@@ -196,7 +196,7 @@ aside {
 .button-selfcollect {
     margin-top: 20px;
     padding: 10px;
-    width: 100px;
+    width: 150px;
     display:flex;
 }
 
