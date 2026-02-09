@@ -54,7 +54,7 @@ footer {
 }
 
 .dishes {
-    max-width: 960px;
+    max-width: 1440px;
     display: flex;
     flex-direction: column;
     align-items: center;
