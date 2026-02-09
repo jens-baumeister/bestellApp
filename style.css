@@ -126,7 +126,7 @@ aside {
     top: 100px;
     right: 0px;
     width: 500px;
-    height: 1228px;
+    height: calc(100vh - 215px);
     border: solid 1px #FF8001;
     border-radius: 5px;
     padding: 10px;
