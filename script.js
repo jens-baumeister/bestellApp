@@ -115,6 +115,3 @@ function checkout() {
   alert("Vielen Dank für Ihre Bestellung!");
 }
 
-function selfCollect() { 
-  let selfCollectCheckbox = document.getElementById("selfcollect");
-}

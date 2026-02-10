@@ -97,11 +97,24 @@ function getCartItem(i) {
 function getTotalPrice(total) {
   return `
 <section class="total_price">
+    <p class="delivery">Lieferservice: €5.00</p>
     <h4>Gesamt:</h4> 
-    <h4>€${total.toFixed(2)}</h4>
+    <h4>€${(total + 5).toFixed(2)}</h4>
 </section>
 <button onclick="checkout()" class="checkout_button">
     <h3>Zur Kasse</h3>
 </button>
 `;
 }
+
+// function getTotalPriceSelfCollect(total) {
+//   return `
+// <section class="total_price">
+//     <h4>Gesamt:</h4> 
+//     <h4>€${total.toFixed(2)}</h4>
+// </section>
+// <button onclick="checkout()" class="checkout_button">
+//     <h3>Zur Kasse</h3>
+// </button>
+// `;
+// }

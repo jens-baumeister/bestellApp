@@ -185,12 +185,17 @@ aside {
 
 .total_price {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     height: 75px;
     margin-top: 20px;
     font-size: 1.5rem;
     flex: 1;
+}
+
+.delivery {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
 }
 
 .button-selfcollect {
