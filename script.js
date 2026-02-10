@@ -106,7 +106,14 @@ function renderTotalPrice() {
   for (let i = 0; i < cart.length; i++) {
     total += cart[i].price * cart[i].quantity;
   }
-  totalPriceRef.innerHTML = getTotalPrice(total);
+
+  let deliveryCost = getDeliveryCost();
+  totalPriceRef.innerHTML = getTotalPrice(total, deliveryCost);
+}
+
+function getDeliveryCost() {
+  let selfCollectButton = document.getElementById("selfcollect");
+  return selfCollectButton.checked ? 0 : 5;
 }
 
 function checkout() {
@@ -114,4 +121,3 @@ function checkout() {
   renderCart();
   alert("Vielen Dank für Ihre Bestellung!");
 }
-
