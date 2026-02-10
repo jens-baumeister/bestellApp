@@ -121,3 +121,8 @@ function checkout() {
   renderCart();
   alert("Vielen Dank für Ihre Bestellung!");
 }
+
+function emptyCart() {
+  cart = [];
+  renderCart();
+}
