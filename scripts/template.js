@@ -100,5 +100,8 @@ function getTotalPrice(total) {
     <h4>Gesamt:</h4> 
     <h4>€${total.toFixed(2)}</h4>
 </section>
+<button onclick="checkout()" class="checkout_button">
+    <h3>Zur Kasse</h3>
+</button>
 `;
 }

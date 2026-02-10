@@ -71,7 +71,7 @@ function addToCart(i, startKey) {
   cart.push({
     name: item.name,
     price: item.price,
-    quantity: +1
+    quantity: +1,
   });
   renderCart();
 }
@@ -107,4 +107,14 @@ function renderTotalPrice() {
     total += cart[i].price * cart[i].quantity;
   }
   totalPriceRef.innerHTML = getTotalPrice(total);
+}
+
+function checkout() {
+  cart = [];
+  renderCart();
+  alert("Vielen Dank für Ihre Bestellung!");
+}
+
+function selfCollect() { 
+  let selfCollectCheckbox = document.getElementById("selfcollect");
 }
