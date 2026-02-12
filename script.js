@@ -119,10 +119,23 @@ function getDeliveryCost() {
 function checkout() {
   cart = [];
   renderCart();
-  alert("Vielen Dank für Ihre Bestellung!");
+  document.getElementById("checkout").showModal();
+}
+
+function closeCheckout() {
+  document.getElementById("checkout").close();
 }
 
 function emptyCart() {
+  document.getElementById("emptycart").showModal();
+}
+
+function clearCart() {
   cart = [];
   renderCart();
+  document.getElementById("emptycart").close();
+}
+
+function closeEmptyCart() {
+  document.getElementById("emptycart").close();
 }

@@ -86,6 +86,15 @@
 
             </section>
         </aside>
+        <dialog id="checkout" class="cart_confirmation">
+            <h4>Vielen Dank für Ihre Bestellung!</h4>
+            <button onclick="closeCheckout()" class="closebtn">OK</button>        
+        </dialog>
+        <dialog id="emptycart" class="cart_confirmation">
+            <h4>Den Warenkorb leeren?</h4>
+            <button onclick="clearCart()" class="closebtn">Ja</button>
+            <button onclick="closeEmptyCart()" class="closebtn">Nein</button>
+        </dialog>
     </main>
 
     <footer>

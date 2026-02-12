@@ -100,8 +100,7 @@ function getTotalPrice(total, deliveryCost) {
     <p id="deliveryRow" class="delivery">
         Lieferservice: €${deliveryCost.toFixed(2)}
     </p>
-    <h4>Gesamt:</h4> 
-    <h4>€${(total + deliveryCost).toFixed(2)}</h4>
+    <h4>Gesamt: €${(total + deliveryCost).toFixed(2)}</h4>
 </section>
 <section class="orders_control">
 <button onclick="checkout()" class="checkout_button">
