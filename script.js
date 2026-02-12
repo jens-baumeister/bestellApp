@@ -4,7 +4,9 @@ function init() {
   renderMainDishes();
   renderDrinks();
   renderDesserts();
+  loadFromLocalStorage();
   renderCart();
+  
 }
 
 function renderMainDishes() {
@@ -73,16 +75,19 @@ function addToCart(i, startKey) {
     price: item.price,
     quantity: +1,
   });
+  saveToLocalStorage();
   renderCart();
 }
 
 function removeFromCart(i) {
   cart.splice(i, 1);
+  saveToLocalStorage();
   renderCart();
 }
 
 function picePlusOne(i) {
   cart[i].quantity += 1;
+  saveToLocalStorage();
   renderCart();
 }
 
@@ -92,6 +97,7 @@ function piceMinusOne(i) {
   } else {
     removeFromCart(i);
   }
+  saveToLocalStorage();
   renderCart();
 }
 
@@ -118,6 +124,7 @@ function getDeliveryCost() {
 
 function checkout() {
   cart = [];
+  saveToLocalStorage();
   renderCart();
   document.getElementById("checkout").showModal();
 }
@@ -132,6 +139,7 @@ function emptyCart() {
 
 function clearCart() {
   cart = [];
+  saveToLocalStorage();
   renderCart();
   document.getElementById("emptycart").close();
 }
