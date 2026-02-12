@@ -5,6 +5,7 @@ function init() {
   renderDrinks();
   renderDesserts();
   loadFromLocalStorage();
+  loadCheckboxFromLocalStorage();
   renderCart();
   
 }
@@ -119,12 +120,14 @@ function renderTotalPrice() {
 
 function getDeliveryCost() {
   let selfCollectButton = document.getElementById("selfcollect");
+  checkboxToLocalStorage();
   return selfCollectButton.checked ? 0 : 5;
 }
 
 function checkout() {
   cart = [];
   saveToLocalStorage();
+  resetCheckboxInLocalStorage();
   renderCart();
   document.getElementById("checkout").showModal();
 }
@@ -140,6 +143,7 @@ function emptyCart() {
 function clearCart() {
   cart = [];
   saveToLocalStorage();
+  resetCheckboxInLocalStorage();
   renderCart();
   document.getElementById("emptycart").close();
 }
