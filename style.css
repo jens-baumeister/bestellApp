@@ -323,3 +323,94 @@ input:checked+.slider:before {
     border: none;
     border-radius: 5px;
 }
+
+@media (max-width: 2450px) {
+    .dish {
+        width: 1000px;
+    }
+
+    .dish_header {
+        width: 980px;
+    }
+}
+
+@media (max-width: 2015px) {
+    aside {
+        width: 400px;
+    }
+
+    .orders_control {
+        width: 380px;
+    }
+
+    .item_details {
+        width: 350px;
+    }
+
+    .portions_control {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1800px) {
+    .dish {
+        width: 700px;
+    }
+
+    .dish_header {
+        width: 680px;
+    }
+}
+
+@media (max-width: 1502px) {
+    aside {
+        width: 300px;
+    }
+
+    .orders_control {
+        width: 280px;
+    }
+
+    .item_details {
+        width: 250px;
+    }
+
+    .checkout_button {
+        width: 100px;
+        font-size: 16px;
+        padding: 5px;
+    }
+
+    .emptycart_button {
+        width: 100px;
+        font-size: 16px;
+        padding: 5px;
+    }
+}
+
+@media (max-width: 1446px) {
+    .header-content {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .restaurant {
+        width: 100%;
+    }
+
+    .menu-head {
+        width: 100%;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .dish {
+        width: 560px;
+        text-align: left;
+    }
+
+    .dish_header {
+        width: 540px;
+    }
+}
