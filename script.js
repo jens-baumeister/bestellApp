@@ -151,3 +151,4 @@ function clearCart() {
 function closeEmptyCart() {
   document.getElementById("emptycart").close();
 }
+
