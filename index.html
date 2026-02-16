@@ -95,6 +95,24 @@
             <button onclick="clearCart()" class="closebtn">Ja</button>
             <button onclick="closeEmptyCart()" class="closebtn">Nein</button>
         </dialog>
+        <dialog id="resp_cart" class="cart resp_cart_box">
+            <h3>Warenkorb:</h3>
+            <label class="switch">
+                <div class="button-selfcollect">
+                    <p class="selfcollect">Selbstabholer</p>
+                    <input id="selfcollect" type="checkbox" onclick="renderTotalPrice()">
+                    <span class="slider"></span>
+                </div>
+            </label>
+
+
+            <section id="cart">
+
+            </section>
+            <section id="totalprice" class="totalprice">
+
+            </section>
+        </dialog>
     </main>
 
     <footer>

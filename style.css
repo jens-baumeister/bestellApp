@@ -335,6 +335,18 @@ input:checked+.slider:before {
     border-radius: 5px;
 }
 
+.resp_cart_box {
+    margin-top: 100px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    height: 800px;
+    position: absolute;
+    border: solid 1px #FF8001;
+    border-radius: 5px;
+}
+
 @media (max-width: 2450px) {
     .dish {
         width: 1000px;
@@ -442,6 +454,10 @@ input:checked+.slider:before {
     }
 
     .mobile_cart {
+        display: flex;
+    }
+
+    .resp_cart_box {
         display: flex;
     }
 
