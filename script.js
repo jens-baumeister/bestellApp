@@ -1,4 +1,8 @@
 let cart = [];
+let isSelfCollect = false;
+
+const desktopCheckbox = document.getElementById("selfcollect");
+const mobileCheckbox = document.getElementById("mobile_selfcollect");
 
 function init() {
   renderMainDishes();
@@ -117,50 +121,91 @@ function piceMinusOne(i) {
 }
 
 function renderTotalPrice() {
+  let desktopRef = document.getElementById("totalprice");
+  let mobileRef = document.getElementById("mobile-totalprice");
+
   if (cart.length === 0) {
-    let totalPriceRef = document.getElementById("totalprice");
-    totalPriceRef.innerHTML = "";
+    desktopRef.innerHTML = "";
+    mobileRef.innerHTML = "";
     return;
   }
-  let totalPriceRef = document.getElementById("totalprice");
+
   let total = 0;
   for (let i = 0; i < cart.length; i++) {
     total += cart[i].price * cart[i].quantity;
   }
 
   let deliveryCost = getDeliveryCost();
-  totalPriceRef.innerHTML = getTotalPrice(total, deliveryCost);
+  let totalHTML = getTotalPrice(total, deliveryCost);
+
+  desktopRef.innerHTML = totalHTML;
+  mobileRef.innerHTML = totalHTML;
 }
 
-function renderMobileTotalPrice() {
-  if (cart.length === 0) {
-    let totalPriceRef = document.getElementById("mobile-totalprice");
-    totalPriceRef.innerHTML = "";
-    return;
-  }
-  let totalPriceRef = document.getElementById("mobile-totalprice");
-  let total = 0;
-  for (let i = 0; i < cart.length; i++) {
-    total += cart[i].price * cart[i].quantity;
-  }
 
-  let deliveryCost = getDeliveryCost();
-  totalPriceRef.innerHTML = getTotalPrice(total, deliveryCost);
+// function renderTotalPrice() {
+//   if (cart.length === 0) {
+//     let totalPriceRef = document.getElementById("totalprice");
+//     totalPriceRef.innerHTML = "";
+//     return;
+//   }
+//   let totalPriceRef = document.getElementById("totalprice");
+//   let total = 0;
+//   for (let i = 0; i < cart.length; i++) {
+//     total += cart[i].price * cart[i].quantity;
+//   }
+
+//   let deliveryCost = getDeliveryCost();
+//   totalPriceRef.innerHTML = getTotalPrice(total, deliveryCost);
+// }
+
+// function renderMobileTotalPrice() {
+//   if (cart.length === 0) {
+//     let totalPriceRef = document.getElementById("mobile-totalprice");
+//     totalPriceRef.innerHTML = "";
+//     return;
+//   }
+//   let totalPriceRef = document.getElementById("mobile-totalprice");
+//   let total = 0;
+//   for (let i = 0; i < cart.length; i++) {
+//     total += cart[i].price * cart[i].quantity;
+//   }
+
+//   let deliveryCost = getDeliveryCost();
+//   totalPriceRef.innerHTML = getTotalPrice(total, deliveryCost);
+// }
+
+desktopCheckbox.addEventListener('change', handleSelfCollectChange);
+mobileCheckbox.addEventListener('change', handleSelfCollectChange);
+
+function handleSelfCollectChange(event) {
+  isSelfCollect = event.target.checked;
+
+  desktopCheckbox.checked = isSelfCollect;
+  mobileCheckbox.checked = isSelfCollect;
+
+  checkboxToLocalStorage();
+  renderTotalPrice();
+  
 }
 
 function getDeliveryCost() {
-  let selfCollectButton = document.getElementById("selfcollect");
-  checkboxToLocalStorage();
-  return selfCollectButton.checked ? 0 : 5;
+  return isSelfCollect ? 0 : 5;
 }
 
-function getMobileDeliveryCost() {
+// function getDeliveryCost() {
+//   let selfCollectButton = document.getElementById("selfcollect");
+//   checkboxToLocalStorage();
+//   return selfCollectButton.checked ? 0 : 5;
+// }
 
-  loadCheckboxFromLocalStorage();
-  let selfCollectButton = document.getElementById("mobile_selfcollect");
-  checkboxToLocalStorage();
-  return selfCollectButton.checked ? 0 : 5;
-}
+// function getMobileDeliveryCost() {
+
+//   loadCheckboxFromLocalStorage();
+//   let selfCollectButton = document.getElementById("mobile_selfcollect");
+//   checkboxToLocalStorage();
+//   return selfCollectButton.checked ? 0 : 5;
+// }
 
 function checkout() {
   cart = [];
