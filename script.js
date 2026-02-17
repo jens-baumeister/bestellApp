@@ -66,12 +66,12 @@ function renderCart() {
 }
 
 function renderMobileCart() {
-  let cartRef = document.getElementById("resp_cart");
+  let cartRef = document.getElementById("mobile_cart");
   cartRef.innerHTML = "";
   for (let i = 0; i < cart.length; i++) {
     cartRef.innerHTML += getCartItem(i);
   }
-  renderTotalPrice();
+  renderMobileTotalPrice();
 }
 
 function addToCart(i, startKey) {
@@ -132,8 +132,32 @@ function renderTotalPrice() {
   totalPriceRef.innerHTML = getTotalPrice(total, deliveryCost);
 }
 
+function renderMobileTotalPrice() {
+  if (cart.length === 0) {
+    let totalPriceRef = document.getElementById("mobile-totalprice");
+    totalPriceRef.innerHTML = "";
+    return;
+  }
+  let totalPriceRef = document.getElementById("mobile-totalprice");
+  let total = 0;
+  for (let i = 0; i < cart.length; i++) {
+    total += cart[i].price * cart[i].quantity;
+  }
+
+  let deliveryCost = getDeliveryCost();
+  totalPriceRef.innerHTML = getTotalPrice(total, deliveryCost);
+}
+
 function getDeliveryCost() {
   let selfCollectButton = document.getElementById("selfcollect");
+  checkboxToLocalStorage();
+  return selfCollectButton.checked ? 0 : 5;
+}
+
+function getMobileDeliveryCost() {
+
+  loadCheckboxFromLocalStorage();
+  let selfCollectButton = document.getElementById("mobile_selfcollect");
   checkboxToLocalStorage();
   return selfCollectButton.checked ? 0 : 5;
 }
@@ -169,5 +193,5 @@ function closeEmptyCart() {
 }
 
 function mobileCart() {
-  document.getElementById("resp_cart").classList.toggle("resp_cart_box");
+  document.getElementById("resp_cart").classList.toggle("open");
 }
