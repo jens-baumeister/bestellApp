@@ -515,3 +515,23 @@ input:checked+.slider:before {
         font-size: 24px;
     }
 }
+
+@media (max-width: 580px) {
+    .category {
+        font-size: 20px;
+    }
+
+    .dish {
+        width: 400px;
+    }
+
+    .dish_header {
+        width: 380px;
+    }
+}
+
+@media (max-width: 450px) {
+    .category {
+        font-size: 18px;
+    }
+}
