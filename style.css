@@ -506,7 +506,7 @@ input:checked+.slider:before {
         display: flex;
     }
 
-    
+
 }
 
 @media (max-width: 700px) {

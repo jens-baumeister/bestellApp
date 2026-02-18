@@ -8,7 +8,6 @@ function init() {
   loadCheckboxFromLocalStorage();
   renderCart();
   renderMobileCart();
-  
 }
 
 function renderMainDishes() {
@@ -138,7 +137,6 @@ function renderTotalPrice() {
   mobileRef.innerHTML = totalHTML;
 }
 
-
 function renderMobileTotalPrice() {
   if (cart.length === 0) {
     let mobileTotalPriceRef = document.getElementById("mobile-totalprice");
@@ -162,7 +160,6 @@ function getDeliveryCost() {
 }
 
 function getMobileDeliveryCost() {
-
   loadCheckboxFromLocalStorage();
   let selfCollectButton = document.getElementById("mobile_selfcollect");
   checkboxToLocalStorage();
