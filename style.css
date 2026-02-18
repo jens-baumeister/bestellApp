@@ -554,6 +554,16 @@ input:checked+.slider:before {
         justify-content: space-around;
     }
 
+    .portions_control {
+        width: 400px;
+        justify-content: flex-end;
+    }
+
+     .total_price {
+        width: 400px;
+        text-align: right;
+     }
+
     .resp_cart_box {
         display: flex;
     }
@@ -571,6 +581,7 @@ input:checked+.slider:before {
 }
 
 @media (max-width: 810px) {
+
     .cart-footer {
         width: 500px;
     }
@@ -583,6 +594,16 @@ input:checked+.slider:before {
     .item_details {
         width: 500px;
     }
+
+    .portions_control {
+        width: 250px;
+        justify-content: flex-end;
+    }
+
+     .total_price {
+        width: 250px;
+        text-align: right;
+     }
 }
 
 @media (max-width: 700px) {
@@ -642,6 +663,16 @@ input:checked+.slider:before {
         font-size: 16px;
         padding-left: 5px;
     }
+
+    .portions_control {
+        width: 200px;
+        justify-content: flex-end;
+    }
+
+     .total_price {
+        width: 200px;
+        text-align: right;
+     }
 }
 
 @media (max-width: 405px) {
@@ -706,5 +737,10 @@ input:checked+.slider:before {
      .cart_item {
         width: 240px;
         height: 120px;
+     }
+
+     .portions_control {
+        width: 200px;
+        justify-content: center;
      }
 }
