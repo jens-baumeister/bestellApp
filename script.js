@@ -139,39 +139,21 @@ function renderTotalPrice() {
 }
 
 
-function renderTotalPrice() {
-  if (cart.length === 0) {
-    let totalPriceRef = document.getElementById("totalprice");
-    totalPriceRef.innerHTML = "";
-    return;
-  }
-  let totalPriceRef = document.getElementById("totalprice");
-  let total = 0;
-  for (let i = 0; i < cart.length; i++) {
-    total += cart[i].price * cart[i].quantity;
-  }
-
-  let deliveryCost = getDeliveryCost();
-  totalPriceRef.innerHTML = getTotalPrice(total, deliveryCost);
-}
-
 function renderMobileTotalPrice() {
   if (cart.length === 0) {
-    let totalPriceRef = document.getElementById("mobile-totalprice");
-    totalPriceRef.innerHTML = "";
+    let mobileTotalPriceRef = document.getElementById("mobile-totalprice");
+    mobileTotalPriceRef.innerHTML = "";
     return;
   }
-  let totalPriceRef = document.getElementById("mobile-totalprice");
+  let mobileTotalPriceRef = document.getElementById("mobile-totalprice");
   let total = 0;
   for (let i = 0; i < cart.length; i++) {
     total += cart[i].price * cart[i].quantity;
   }
 
-  let deliveryCost = getDeliveryCost();
-  totalPriceRef.innerHTML = getTotalPrice(total, deliveryCost);
+  let deliveryCost = getMobileDeliveryCost();
+  mobileTotalPriceRef.innerHTML = getMobileTotalPrice(total, deliveryCost);
 }
-
-
 
 function getDeliveryCost() {
   let selfCollectButton = document.getElementById("selfcollect");
