@@ -95,7 +95,7 @@ footer {
     max-width: 1440px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .dishes img {
@@ -109,7 +109,7 @@ footer {
 .menu-head {
     margin-top: 20px;
     width: 1440px;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .menu-head img {
@@ -141,6 +141,7 @@ footer {
     border-radius: 5px;
     background-color: white;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 18px;
 }
 
 .price {
@@ -441,19 +442,16 @@ input:checked+.slider:before {
 
 @media (max-width: 1800px) {
     .dish {
-        width: 700px;
+        width: 1000px;
     }
 
     .dish_header {
-        width: 680px;
+        width: 980px;
     }
 }
 
 @media (max-width: 1502px) {
-    aside {
-        width: 300px;
-    }
-
+    
     .orders_control {
         width: 280px;
     }
@@ -485,20 +483,34 @@ input:checked+.slider:before {
     }
 }
 
-@media (max-width: 1446px) {
+@media (max-width: 1450px) {
     .header-content {
         width: 100%;
         padding: 0 20px;
     }
 
+    aside {
+        width: 300px;
+    }
+
+    .dish {
+        width: 700px;
+    }
+
+    .dish_header {
+        width: 680px;
+    }
+
     .restaurant {
-        width: 100%;
+        width: 700px;
     }
 
     .menu-head {
         width: 100%;
         padding: 0 20px;
     }
+
+    
 }
 
 @media (max-width: 1300px) {
@@ -509,6 +521,20 @@ input:checked+.slider:before {
 
     .dish_header {
         width: 540px;
+    }
+
+    .restaurant {
+        width: 560px;
+        padding: 0;
+    }
+
+    .menu-head {
+        width: 560px;
+        padding: 0;
+    }
+
+    .category {
+        font-size: 28px;
     }
 }
 
@@ -522,7 +548,7 @@ input:checked+.slider:before {
     }
 
     .item_details {
-        width: 400px;
+        width: 800px;
         padding-top: 10px;
         font-size: 18px;
         justify-content: space-around;
@@ -532,7 +558,31 @@ input:checked+.slider:before {
         display: flex;
     }
 
+    .cart-footer {
+        width: 800px;
+    }
 
+    .orders_control {
+        width: 800px;
+        justify-content: space-around;
+    }
+
+
+}
+
+@media (max-width: 810px) {
+    .cart-footer {
+        width: 500px;
+    }
+
+    .orders_control {
+        width: 500px;
+        justify-content: space-around;
+    }
+
+    .item_details {
+        width: 500px;
+    }
 }
 
 @media (max-width: 700px) {
@@ -543,6 +593,25 @@ input:checked+.slider:before {
 }
 
 @media (max-width: 580px) {
+
+    header {
+        max-width: 100vw;
+    }
+
+    .restaurant {
+        width: 400px;
+        padding-left: 5px;
+    }
+
+    .menu-head {
+        width: 400px;
+        padding-left: 5px;
+    }
+
+    .dishes {
+        align-items: center;
+        width: 400px;
+    }
     .category {
         font-size: 20px;
     }
@@ -556,8 +625,86 @@ input:checked+.slider:before {
     }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 516px) {
+
+    .cart-footer {
+        width: 300px;
+    }
+
+    .orders_control {
+        width: 300px;
+        justify-content: space-around;
+    }
+
+    .item_details {
+        width: 300px;
+        height: 120px;
+        font-size: 16px;
+        padding-left: 5px;
+    }
+}
+
+@media (max-width: 405px) {
+
+    h3 {
+        font-size: 18px;
+    }
+
+     .checkout_button {
+        width: 80px;
+        font-size: 14px;
+        padding: 5px;
+    }
+
+    .emptycart_button {
+        width: 80px;
+        font-size: 14px;
+        padding: 5px;
+    }
+
     .category {
         font-size: 18px;
     }
+
+    .restaurant {
+        width: 300px;
+        padding-left: 5px;
+    }
+
+    .menu-head {
+        width: 300px;
+        padding-left: 5px;
+    }
+
+    .dishes {
+        align-items: center;
+        width: 300px;
+    }
+
+    .dish {
+        align-items: center;
+        width: 300px;
+        font-size: 16px;
+    }
+    
+     .dish_header {
+        width: 280px;
+     }
+
+     .category {
+        font-size: 16px;
+     }
+
+     .cart-content {
+        width: 300px;
+     }
+
+     .item_details {
+        width: 220px;
+     }
+
+     .cart_item {
+        width: 240px;
+        height: 120px;
+     }
 }
