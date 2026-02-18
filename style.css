@@ -568,6 +568,10 @@ input:checked+.slider:before {
         display: flex;
     }
 
+    .cart-header {
+        width: 800px;
+    }
+
     .cart-footer {
         width: 800px;
     }
@@ -581,6 +585,10 @@ input:checked+.slider:before {
 }
 
 @media (max-width: 810px) {
+
+    .cart-header {
+        width: 500px;
+    }
 
     .cart-footer {
         width: 500px;
@@ -647,6 +655,10 @@ input:checked+.slider:before {
 }
 
 @media (max-width: 516px) {
+
+    .cart-header {
+        width: 300px;
+    }
 
     .cart-footer {
         width: 300px;

@@ -6,6 +6,7 @@ function init() {
   renderDesserts();
   loadFromLocalStorage();
   loadCheckboxFromLocalStorage();
+  loadMobileCheckboxFromLocalStorage();
   renderCart();
   renderMobileCart();
 }
@@ -160,16 +161,16 @@ function getDeliveryCost() {
 }
 
 function getMobileDeliveryCost() {
-  loadCheckboxFromLocalStorage();
-  let selfCollectButton = document.getElementById("mobile_selfcollect");
-  checkboxToLocalStorage();
-  return selfCollectButton.checked ? 0 : 5;
+  let mobileSelfCollectButton = document.getElementById("mobile_selfcollect");
+  checkMobileBoxToLocalStorage();
+  return mobileSelfCollectButton.checked ? 0 : 5;
 }
 
 function checkout() {
   cart = [];
   saveToLocalStorage();
   resetCheckboxInLocalStorage();
+  resetMobileCheckboxInLocalStorage();
   renderCart();
   renderMobileCart();
   document.getElementById("checkout").showModal();
