@@ -682,7 +682,7 @@ input:checked+.slider:before {
     }
 
     .dish {
-        align-items: center;
+        align-items: flex-start;
         width: 300px;
         font-size: 16px;
     }
