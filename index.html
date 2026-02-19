@@ -43,7 +43,8 @@
                     <span class="fa fa-star"></span>
                     )
                 </p>
-                <p class="restaurant-text">Wilkommen bei Tempo di Pasta! Die Adresse für typische italienische Gerichte in der Innenstadt.</p>
+                <p class="restaurant-text">Wilkommen bei Tempo di Pasta! Die Adresse für typische italienische Gerichte
+                    in der Innenstadt.</p>
             </div>
         </section>
         <article class="dishes">
@@ -72,20 +73,24 @@
 
         </article>
         <aside class="cart">
-            <h3>Warenkorb:</h3>
-            <label class="switch">
-                <div class="button-selfcollect">
-                    <p class="selfcollect">Selbstabholer</p>
-                    <input id="selfcollect" type="checkbox" onclick="renderCart()">
-                    <span class="slider"></span>
-                </div>
-            </label>
+            <section class="cart-header">
+                <h3>Warenkorb:</h3>
+            </section>
 
 
-            <section id="cart">
+            <section id="cart" class="desktop_cart">
 
             </section>
-            <section id="totalprice" class="totalprice">
+
+            <section class="total_price">
+                <label class="switch">
+                    <div class="button-selfcollect">
+                        <p class="selfcollect">Selbstabholer</p>
+                        <input id="selfcollect" type="checkbox" onclick="renderCart()">
+                        <span class="slider"><span>
+                    </div>
+                </label>
+                <div id="totalprice"></div>
 
             </section>
         </aside>
@@ -101,18 +106,21 @@
         <article id="resp_cart" class="resp_cart_box">
             <div class="cart-header">
                 <h3>Warenkorb:</h3>
+            </div>
+
+
+            <div id="mobile_cart" class="cart-content"></div>
+            <div class="cart-footer">
+
                 <label class="switch">
                     <div class="button-selfcollect">
                         <p class="selfcollect">Selbstabholer</p>
                         <input id="mobile_selfcollect" type="checkbox" onclick="renderMobileCart()">
                         <span class="slider"></span>
                     </div>
+                </label>
+                <div id="mobile-totalprice"></div>
             </div>
-            </label>
-
-
-            <div id="mobile_cart" class="cart-content"></div>
-            <div id="mobile-totalprice" class="cart-footer"></div>
 
             </section>
         </article>
