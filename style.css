@@ -316,6 +316,7 @@ input:checked+.slider:before {
 .desktop_cart {
     flex: 1;
     overflow-y: auto;
+    overscroll-behavior: contain;
     height: 70%;
     border-bottom: solid 1px gray;
 }
@@ -410,6 +411,7 @@ input:checked+.slider:before {
 .cart-content {
     flex: 1;
     overflow-y: auto;
+    overscroll-behavior: contain;
     padding: 10px 20px;
 }
 
