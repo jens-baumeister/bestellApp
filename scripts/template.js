@@ -96,15 +96,15 @@ function getCartItem(i) {
 }
 function getTotalPrice(total, deliveryCost) {
   return `
-<section class="total_price">
-    <p id="deliveryRow" class="delivery">
+<section>
+    <p id="deliveryRow">
         Lieferservice: €${deliveryCost.toFixed(2)}
     </p>
     <h4>Gesamt: €${(total + deliveryCost).toFixed(2)}</h4>
 </section>
 <section class="orders_control">
 <button onclick="checkout()" class="checkout_button" aria-label="checkout">
-    <h3>Zur Kasse</h3>
+    <p>Zur Kasse</p>
 </button>
 <button onclick="emptyCart()" class="emptycart_button" aria-label="empty cart">
     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fffefe"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg>
@@ -115,15 +115,15 @@ function getTotalPrice(total, deliveryCost) {
 
 function getMobileTotalPrice(total, deliveryCost) {
   return `
-<section class="total_price">
-    <p id="deliveryRow" class="delivery">
+<section>
+    <p id="deliveryRow">
         Lieferservice: €${deliveryCost.toFixed(2)}
     </p>
     <h4>Gesamt: €${(total + deliveryCost).toFixed(2)}</h4>
 </section>
 <section class="orders_control">
 <button onclick="checkout()" class="checkout_button">
-    <h3>Zur Kasse</h3>
+    <p>Zur Kasse</p>
 </button>
 <button onclick="emptyCart()" class="emptycart_button">
     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fffefe"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg>

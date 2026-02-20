@@ -173,7 +173,6 @@ aside {
     padding: 10px;
     background-color: white;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    overflow-y: auto;
 }
 
 .cart {
@@ -237,12 +236,15 @@ aside {
 .total_price {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 75px;
+    align-items: space-between;
     margin-top: 20px;
-    font-size: 1.5rem;
-    flex: 1;
+    font-size: 18px;
+    flex-shrink: 2;
 }
+
+/* #totalprice {
+    margin-top: 10px;
+} */
 
 .delivery {
     margin-bottom: 10px;
@@ -308,6 +310,7 @@ input:checked+.slider:before {
     font-size: 1.2rem;
     font-weight: bold;
     margin-left: -10px;
+    margin-bottom: 20px;
 }
 
 .desktop_cart {
@@ -327,11 +330,11 @@ input:checked+.slider:before {
 .checkout_button {
     margin-top: 40px;
     padding: 10px;
-    height: 52px;
-    width: 150px;
+    height: 40px;
+    width: 120px;
     background-color: #FF8001;
     color: white;
-    font-size: 1.2rem;
+    font-size: 18px;
     font-weight: bold;
     border: none;
     border-radius: 5px;
@@ -341,8 +344,8 @@ input:checked+.slider:before {
 .emptycart_button {
     margin-top: 40px;
     padding: 10px;
-    height: 52px;
-    width: 150px;
+    height: 40px;
+    width: 120px;
     background-color: #FF8001;
     color: white;
     font-size: 1.2rem;
@@ -412,6 +415,7 @@ input:checked+.slider:before {
 
 .cart-footer {
     padding: 20px;
+    height: 200px;
     border-top: 1px solid #eee;
     flex-shrink: 0;
 }
