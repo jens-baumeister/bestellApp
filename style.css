@@ -134,6 +134,7 @@ footer {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    text-align: left;
     width: 1000px;
     margin-top: 20px;
     padding: 10px;
@@ -152,6 +153,10 @@ footer {
     color: white;
     font-size: 18px;
     margin-right: 20px;
+}
+
+.copyright {
+    margin-left: 20px;
 }
 
 .dish_header {
@@ -646,9 +651,9 @@ input:checked+.slider:before {
         max-width: 98vw;
     }
 
-    footer {
+    /* footer {
         max-width: 98vw;
-    }
+    } */
 
     .upper_img img {
         width: 97vw;
