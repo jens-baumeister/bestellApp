@@ -173,3 +173,7 @@ function clearCart() {
   resetCart();
   closeDialog("emptycart");
 }
+
+function mobileCart() {
+  document.getElementById("resp_cart").classList.toggle("open");
+}
