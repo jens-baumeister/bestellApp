@@ -323,6 +323,7 @@ input:checked+.slider:before {
     display: flex;
     justify-content: space-between;
     width: 360px;
+    height: 50px;
     margin-bottom: 10px;
 }
 
@@ -465,7 +466,7 @@ input:checked+.slider:before {
 }
 
 @media (max-width: 1502px) {
-    
+
     .orders_control {
         width: 280px;
     }
@@ -507,12 +508,13 @@ input:checked+.slider:before {
         font-size: 16px;
         padding: 5px;
     }
+
     .header-content {
         width: 100%;
         padding: 0 20px;
     }
 
-    
+
 
     .restaurant {
         width: 700px;
@@ -537,6 +539,7 @@ input:checked+.slider:before {
     .upper_img img {
         width: 98vw;
     }
+
     .dish {
         width: 560px;
         text-align: left;
@@ -566,6 +569,7 @@ input:checked+.slider:before {
     main {
         width: 100%;
     }
+
     aside {
         display: none;
     }
@@ -586,10 +590,10 @@ input:checked+.slider:before {
         justify-content: flex-end;
     }
 
-     .total_price {
+    .total_price {
         width: 400px;
         text-align: right;
-     }
+    }
 
     .resp_cart_box {
         display: flex;
@@ -599,8 +603,14 @@ input:checked+.slider:before {
         width: 800px;
     }
 
+    .cart-content {
+        height: calc(100% - 170px);
+    }
+
     .cart-footer {
         width: 800px;
+        padding: 0;
+        height: 170px;
     }
 
     .orders_control {
@@ -610,12 +620,31 @@ input:checked+.slider:before {
 
     .switch {
         margin-top: 10px;
-        margin-left: 0;
+        margin-bottom: 10px;
     }
 
-     .selfcollect {
+    .selfcollect {
         margin-left: 0;
-     }
+        margin-bottom: 5px;
+    }
+
+    .checkout_button {
+        width: 150px;
+        font-size: 18px;
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    .emptycart_button {
+        width: 150px;
+        font-size: 18px;
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    .cart-footer {
+        bottom: 10px;
+    }
 
 
 }
@@ -644,10 +673,10 @@ input:checked+.slider:before {
         justify-content: flex-end;
     }
 
-     .total_price {
+    .total_price {
         width: 250px;
         text-align: right;
-     }
+    }
 }
 
 @media (max-width: 700px) {
@@ -663,7 +692,7 @@ input:checked+.slider:before {
     .upper_img img {
         width: 97vw;
     }
-    
+
     .category {
         font-size: 24px;
     }
@@ -689,6 +718,7 @@ input:checked+.slider:before {
         align-items: center;
         width: 400px;
     }
+
     .category {
         font-size: 20px;
     }
@@ -708,11 +738,11 @@ input:checked+.slider:before {
         width: 96vw;
     }
 
-     .category {
+    .category {
         font-size: 20px;
     }
 
-     .restaurant {
+    .restaurant {
         width: 300px;
         padding-left: 5px;
     }
@@ -730,6 +760,18 @@ input:checked+.slider:before {
         justify-content: space-around;
     }
 
+    .checkout_button {
+        width: 80px;
+        font-size: 14px;
+        padding: 5px;
+    }
+
+    .emptycart_button {
+        width: 80px;
+        font-size: 14px;
+        padding: 5px;
+    }
+
     .item_details {
         width: 300px;
         height: 120px;
@@ -742,28 +784,16 @@ input:checked+.slider:before {
         justify-content: flex-end;
     }
 
-     .total_price {
+    .total_price {
         width: 200px;
         text-align: right;
-     }
+    }
 }
 
 @media (max-width: 416px) {
 
     h3 {
         font-size: 18px;
-    }
-
-     .checkout_button {
-        width: 80px;
-        font-size: 14px;
-        padding: 5px;
-    }
-
-    .emptycart_button {
-        width: 80px;
-        font-size: 14px;
-        padding: 5px;
     }
 
     .category {
@@ -790,32 +820,32 @@ input:checked+.slider:before {
         width: 300px;
         font-size: 16px;
     }
-    
-     .dish_header {
+
+    .dish_header {
         width: 280px;
-     }
+    }
 
-     .category {
+    .category {
         font-size: 16px;
-     }
+    }
 
-     .cart-content {
+    .cart-content {
         width: 300px;
-     }
+    }
 
-     .item_details {
+    .item_details {
         width: 220px;
-     }
+    }
 
-     .cart_item {
+    .cart_item {
         width: 240px;
         height: 120px;
-     }
+    }
 
-     .portions_control {
+    .portions_control {
         width: 200px;
         justify-content: center;
-     }
+    }
 }
 
 @media (max-width: 350px) {
@@ -824,11 +854,11 @@ input:checked+.slider:before {
         width: 95vw;
     }
 
-     .category {
+    .category {
         font-size: 16px;
     }
 
-     .restaurant {
+    .restaurant {
         width: 250px;
         padding-left: 5px;
     }
