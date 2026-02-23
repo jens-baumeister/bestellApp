@@ -35,25 +35,20 @@ function renderDesserts() {
   }
 }
 
-function onlyDishes() {
-  document.getElementById("maindishes").innerHTML = "";
-  document.getElementById("drinks").innerHTML = "";
-  document.getElementById("desserts").innerHTML = "";
-  renderMainDishes();
-}
+function showCategories(category) {
+  let categoryRefs = {
+    maindishes: renderMainDishes,
+    drinks: renderDrinks,
+    desserts: renderDesserts,
+  };
 
-function onlyDrinks() {
-  document.getElementById("maindishes").innerHTML = "";
-  document.getElementById("drinks").innerHTML = "";
-  document.getElementById("desserts").innerHTML = "";
-  renderDrinks();
-}
-
-function onlyDesserts() {
-  document.getElementById("maindishes").innerHTML = "";
-  document.getElementById("drinks").innerHTML = "";
-  document.getElementById("desserts").innerHTML = "";
-  renderDesserts();
+  for (let key in categoryRefs) {
+    if (key === category) {
+      categoryRefs[key]();
+    } else {
+      document.getElementById(key).innerHTML = "";
+    }
+  }
 }
 
 function renderCart() {
