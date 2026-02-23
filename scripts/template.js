@@ -96,8 +96,8 @@ function getCartItem(i) {
 }
 function getTotalPrice(total, deliveryCost) {
   return `
-<section>
-    <p id="deliveryRow">
+<section class="price_details">
+    <p>
         Lieferservice: €${deliveryCost.toFixed(2)}
     </p>
     <h4>Gesamt: €${(total + deliveryCost).toFixed(2)}</h4>
@@ -116,7 +116,7 @@ function getTotalPrice(total, deliveryCost) {
 function getMobileTotalPrice(total, deliveryCost) {
   return `
 <section>
-    <p id="deliveryRow">
+    <p>
         Lieferservice: €${deliveryCost.toFixed(2)}
     </p>
     <h4>Gesamt: €${(total + deliveryCost).toFixed(2)}</h4>
