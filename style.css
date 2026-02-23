@@ -872,4 +872,7 @@ input:checked+.slider:before {
         align-items: center;
         width: 250px;
     }
+    .copyright {
+        display: none;
+    }
 }
