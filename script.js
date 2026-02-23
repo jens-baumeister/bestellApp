@@ -1,9 +1,9 @@
 let cart = [];
 
 function init() {
-  renderMainDishes();
-  renderDrinks();
-  renderDesserts();
+  renderCategory("maindishes");
+  renderCategory("drinks");
+  renderCategory("desserts");
   loadFromLocalStorage();
   loadCheckboxFromLocalStorage();
   loadMobileCheckboxFromLocalStorage();
@@ -11,44 +11,26 @@ function init() {
   renderMobileCart();
 }
 
-function renderMainDishes() {
-  let mainDishesRef = document.getElementById("maindishes");
-  mainDishesRef.innerHTML = "";
-  for (let i = 0; i < menu.mainDishes.length; i++) {
-    mainDishesRef.innerHTML += getMainDishes(i);
-  }
-}
-
-function renderDrinks() {
-  let drinksRef = document.getElementById("drinks");
-  drinksRef.innerHTML = "";
-  for (let i = 0; i < menu.drinks.length; i++) {
-    drinksRef.innerHTML += getDrinks(i);
-  }
-}
-
-function renderDesserts() {
-  let dessertsRef = document.getElementById("desserts");
-  dessertsRef.innerHTML = "";
-  for (let i = 0; i < menu.desserts.length; i++) {
-    dessertsRef.innerHTML += getDesserts(i);
-  }
-}
-
-function showCategories(category) {
-  let categoryRefs = {
-    maindishes: renderMainDishes,
-    drinks: renderDrinks,
-    desserts: renderDesserts,
+function showCategory(category) {
+  let categoryMap = {
+    maindishes: "maindishes",
+    drinks: "drinks",
+    desserts: "desserts",
   };
+  Object.keys(categoryMap).forEach((id) => {
+    document.getElementById(id).innerHTML = "";
+  });
 
-  for (let key in categoryRefs) {
-    if (key === category) {
-      categoryRefs[key]();
-    } else {
-      document.getElementById(key).innerHTML = "";
-    }
-  }
+  renderCategory(categoryMap[category]);
+}
+
+function renderCategory(category) {
+  const container = document.getElementById(category);
+  container.innerHTML = "";
+
+  menu[category].forEach((item, index) => {
+    container.innerHTML += getMenuItemTemplate(item, category, index);
+  });
 }
 
 function renderCart() {
@@ -161,37 +143,33 @@ function getMobileDeliveryCost() {
   return mobileSelfCollectButton.checked ? 0 : 5;
 }
 
-function checkout() {
+function openDialog(id) {
+  document.getElementById(id).showModal();
+}
+
+function closeDialog(id) {
+  document.getElementById(id).close();
+}
+
+function resetCart() {
   cart = [];
   saveToLocalStorage();
   resetCheckboxInLocalStorage();
   resetMobileCheckboxInLocalStorage();
   renderCart();
   renderMobileCart();
-  document.getElementById("checkout").showModal();
 }
 
-function closeCheckout() {
-  document.getElementById("checkout").close();
+function checkout() {
+  resetCart();
+  openDialog("checkout");
 }
 
 function emptyCart() {
-  document.getElementById("emptycart").showModal();
+  openDialog("emptycart");
 }
 
 function clearCart() {
-  cart = [];
-  saveToLocalStorage();
-  resetCheckboxInLocalStorage();
-  renderCart();
-  renderMobileCart();
-  document.getElementById("emptycart").close();
-}
-
-function closeEmptyCart() {
-  document.getElementById("emptycart").close();
-}
-
-function mobileCart() {
-  document.getElementById("resp_cart").classList.toggle("open");
+  resetCart();
+  closeDialog("emptycart");
 }

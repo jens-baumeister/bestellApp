@@ -55,13 +55,13 @@
                         </svg>
                     </h2>
                 </button>
-                <button onclick="showCategories('maindishes')">
+                <button onclick="showCategory('maindishes')">
                     <h2 class="category">Hauptgerichte</h2>
                 </button>
-                <button onclick="showCategories('drinks')">
+                <button onclick="showCategory('drinks')">
                     <h2 class="category">Getränke</h2>
                 </button>
-                <button onclick="showCategories('desserts')">
+                <button onclick="showCategory('desserts')">
                     <h2 class="category">Desserts</h2>
                 </button>
             </nav>
@@ -94,12 +94,13 @@
         </aside>
         <dialog id="checkout" class="cart_confirmation">
             <h4>Vielen Dank für Ihre Bestellung!</h4>
-            <button onclick="closeCheckout()" class="closebtn">OK</button>
+            <button onclick="closeDialog('checkout')" class="closebtn">OK</button>
         </dialog>
+
         <dialog id="emptycart" class="cart_confirmation">
             <h4>Den Warenkorb leeren?</h4>
             <button onclick="clearCart()" class="closebtn">Ja</button>
-            <button onclick="closeEmptyCart()" class="closebtn">Nein</button>
+            <button onclick="closeDialog('emptycart')" class="closebtn">Nein</button>
         </dialog>
         <article id="resp_cart" class="resp_cart_box">
             <div class="cart-header">
@@ -117,7 +118,7 @@
                     </div>
                 </label>
 
-                        <p class="selfcollect">Selbstabholer</p>
+                <p class="selfcollect">Selbstabholer</p>
                 <div id="mobile-totalprice"></div>
             </section>
 

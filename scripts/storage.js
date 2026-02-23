@@ -17,7 +17,8 @@ function checkboxToLocalStorage() {
 function loadCheckboxFromLocalStorage() {
   let selfCollectValue = localStorage.getItem("selfCollect");
   if (selfCollectValue) {
-    document.getElementById("selfcollect").checked = selfCollectValue === "true";
+    document.getElementById("selfcollect").checked =
+      selfCollectValue === "true";
   }
 }
 
@@ -34,7 +35,8 @@ function checkMobileBoxToLocalStorage() {
 function loadMobileCheckboxFromLocalStorage() {
   let mobileSelfCollectValue = localStorage.getItem("mobile_selfCollect");
   if (mobileSelfCollectValue) {
-    document.getElementById("mobile_selfcollect").checked = mobileSelfCollectValue === "true";
+    document.getElementById("mobile_selfcollect").checked =
+      mobileSelfCollectValue === "true";
   }
 }
 

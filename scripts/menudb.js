@@ -1,5 +1,5 @@
 const menu = {
-  mainDishes: [
+  maindishes: [
     {
       name: "Ragù alla Bolognese",
       price: 12.5,
