@@ -84,7 +84,7 @@
                 <label class="switch">
                     <div class="button-selfcollect">
                         <p class="selfcollect">Selbstabholer</p>
-                        <input id="selfcollect" type="checkbox" onclick="renderCart()">
+                        <input type="checkbox" id="selfcollect" onchange="getDeliveryCost('selfcollect')">
                         <span class="slider"><span>
                     </div>
                 </label>
@@ -113,7 +113,7 @@
 
                 <label class="switch">
                     <div class="button-selfcollect">
-                        <input id="mobile_selfcollect" type="checkbox" onclick="renderMobileCart()">
+                        <input type="checkbox" id="mobile_selfcollect" onchange="getDeliveryCost('mobile_selfcollect')">
                         <span class="slider"></span>
                     </div>
                 </label>

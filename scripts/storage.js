@@ -26,21 +26,3 @@ function resetCheckboxInLocalStorage() {
   localStorage.setItem("selfCollect", false);
   document.getElementById("selfcollect").checked = false;
 }
-
-function checkMobileBoxToLocalStorage() {
-  let mobileSelfCollectButton = document.getElementById("mobile_selfcollect");
-  localStorage.setItem("mobile_selfCollect", mobileSelfCollectButton.checked);
-}
-
-function loadMobileCheckboxFromLocalStorage() {
-  let mobileSelfCollectValue = localStorage.getItem("mobile_selfCollect");
-  if (mobileSelfCollectValue) {
-    document.getElementById("mobile_selfcollect").checked =
-      mobileSelfCollectValue === "true";
-  }
-}
-
-function resetMobileCheckboxInLocalStorage() {
-  localStorage.setItem("mobile_selfCollect", false);
-  document.getElementById("mobile_selfcollect").checked = false;
-}

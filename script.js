@@ -1,4 +1,5 @@
 let cart = [];
+let deliveryCost = getDeliveryCost();
 
 function init() {
   renderCategory("maindishes");
@@ -6,9 +7,7 @@ function init() {
   renderCategory("desserts");
   loadFromLocalStorage();
   loadCheckboxFromLocalStorage();
-  loadMobileCheckboxFromLocalStorage();
   renderCart();
-  renderMobileCart();
 }
 
 function showCategory(category) {
@@ -34,22 +33,22 @@ function renderCategory(category) {
 }
 
 function renderCart() {
-  let cartRef = document.getElementById("cart");
-  cartRef.innerHTML = "";
+  const containers = ["cart", "mobile_cart"]
+    .map(id => document.getElementById(id))
+    .filter(Boolean);
+
+  let html = "";
   for (let i = 0; i < cart.length; i++) {
-    cartRef.innerHTML += getCartItem(i);
+    html += getCartItem(i);
   }
+
+  containers.forEach(container => {
+    container.innerHTML = html;
+  });
+
   renderTotalPrice();
 }
 
-function renderMobileCart() {
-  let cartRef = document.getElementById("mobile_cart");
-  cartRef.innerHTML = "";
-  for (let i = 0; i < cart.length; i++) {
-    cartRef.innerHTML += getCartItem(i);
-  }
-  renderMobileTotalPrice();
-}
 
 function addToCart(i, startKey) {
   if (cart.some((item) => item.name === menu[startKey][i].name)) {
@@ -65,21 +64,18 @@ function addToCart(i, startKey) {
   });
   saveToLocalStorage();
   renderCart();
-  renderMobileCart();
 }
 
 function removeFromCart(i) {
   cart.splice(i, 1);
   saveToLocalStorage();
   renderCart();
-  renderMobileCart();
 }
 
 function picePlusOne(i) {
   cart[i].quantity += 1;
   saveToLocalStorage();
   renderCart();
-  renderMobileCart();
 }
 
 function piceMinusOne(i) {
@@ -90,7 +86,6 @@ function piceMinusOne(i) {
   }
   saveToLocalStorage();
   renderCart();
-  renderMobileCart();
 }
 
 function renderTotalPrice() {
@@ -115,32 +110,19 @@ function renderTotalPrice() {
   mobileRef.innerHTML = totalHTML;
 }
 
-function renderMobileTotalPrice() {
-  if (cart.length === 0) {
-    let mobileTotalPriceRef = document.getElementById("mobile-totalprice");
-    mobileTotalPriceRef.innerHTML = "";
-    return;
+function getDeliveryCost(changedId = null) {
+  const ids = ["selfcollect", "mobile_selfcollect"];
+  const boxes = ids.map(id => document.getElementById(id)).filter(Boolean);
+  let state = localStorage.getItem("selfcollect") === "true";
+
+  if (changedId) {
+    state = document.getElementById(changedId).checked;
+    localStorage.setItem("selfcollect", state);
+    renderCart();
   }
-  let mobileTotalPriceRef = document.getElementById("mobile-totalprice");
-  let total = 0;
-  for (let i = 0; i < cart.length; i++) {
-    total += cart[i].price * cart[i].quantity;
-  }
 
-  let deliveryCost = getMobileDeliveryCost();
-  mobileTotalPriceRef.innerHTML = getMobileTotalPrice(total, deliveryCost);
-}
-
-function getDeliveryCost() {
-  let selfCollectButton = document.getElementById("selfcollect");
-  checkboxToLocalStorage();
-  return selfCollectButton.checked ? 0 : 5;
-}
-
-function getMobileDeliveryCost() {
-  let mobileSelfCollectButton = document.getElementById("mobile_selfcollect");
-  checkMobileBoxToLocalStorage();
-  return mobileSelfCollectButton.checked ? 0 : 5;
+  boxes.forEach(cb => cb.checked = state);
+  return state ? 0 : 5;
 }
 
 function openDialog(id) {
@@ -155,9 +137,7 @@ function resetCart() {
   cart = [];
   saveToLocalStorage();
   resetCheckboxInLocalStorage();
-  resetMobileCheckboxInLocalStorage();
   renderCart();
-  renderMobileCart();
 }
 
 function checkout() {
@@ -171,6 +151,7 @@ function emptyCart() {
 
 function clearCart() {
   resetCart();
+  renderCart();
   closeDialog("emptycart");
 }
 
