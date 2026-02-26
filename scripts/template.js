@@ -1,12 +1,14 @@
 function getMenuItemTemplate(item, category, index) {
   return `
-<button onclick="addToCart(${index}, '${category}')" class="dish">
+<section class="dish">
     <div class="dish_header">
         <h3>${item.name}
         </h3>
+        <button onclick="addToCart(${index}, '${category}')" class="add_to_cart_button" aria-label="add to cart">
         <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#FF8001">
             <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z" />
         </svg>
+        </button>
 
     </div><br>
     <p>${item.description}</p><br>
@@ -14,7 +16,7 @@ function getMenuItemTemplate(item, category, index) {
         <br>
         <h3>€${item.price.toFixed(2)}</h3>
     </div>
-</button>
+</section>
 `;
 }
 

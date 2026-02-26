@@ -1,6 +1,4 @@
-body {
-    position: relative;
-}
+
 
 header {
     background-color: #FF8001;
@@ -100,12 +98,35 @@ footer {
     align-items: flex-start;
 }
 
-.dishes img {
-    width: 99.5vw;
-    height: 200px;
-    margin-top: 10px;
-    object-fit: cover;
-    object-position: center bottom;
+.add_to_cart_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: solid 1px #FF8001;
+    border-radius: 5px;
+    top: 1px;
+    right: 1px;
+    cursor: pointer;
+}
+
+.add_to_cart_button:hover {
+    scale: 1.1;
+    background-color: #FF8001;
+}
+
+.add_to_cart_button svg:hover {
+    fill: white;
+}
+
+.add_to_cart_button:focus {
+    scale: 1.1;
+    background-color: #FF8001;
+}
+
+.add_to_cart_button svg:focus {
+    fill: white;
 }
 
 .menu-head {
@@ -170,11 +191,11 @@ footer {
 aside {
     position: fixed;
     align-self: flex-end;
-    top: 100px;
+    top: 300px;
     float: inline-end;
     margin: 0 auto;
     width: 400px;
-    height: calc(100vh - 200px);
+    height: calc(100vh - 400px);
     border: solid 1px #FF8001;
     border-radius: 5px;
     padding: 10px;
