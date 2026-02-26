@@ -119,14 +119,6 @@ footer {
     fill: white;
 }
 
-.add_to_cart_button:focus {
-    background-color: #FF8001;
-}
-
-.add_to_cart_button svg:focus {
-    fill: white;
-}
-
 .menu-head {
     margin-top: 20px;
     width: 1440px;
