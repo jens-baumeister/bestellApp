@@ -138,7 +138,7 @@ function resetCart() {
   saveToLocalStorage();
   resetCheckboxInLocalStorage();
   renderCart();
-  mobileCart();
+  toggleMobileCart();
 }
 
 function checkout() {
@@ -156,6 +156,6 @@ function clearCart() {
   closeDialog("emptycart");
 }
 
-function mobileCart() {
+function toggleMobileCart() {
   document.getElementById("resp_cart").classList.toggle("open");
 }
