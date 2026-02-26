@@ -138,6 +138,7 @@ function resetCart() {
   saveToLocalStorage();
   resetCheckboxInLocalStorage();
   renderCart();
+  mobileCart();
 }
 
 function checkout() {
